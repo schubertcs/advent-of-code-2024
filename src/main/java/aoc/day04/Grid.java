@@ -1,5 +1,8 @@
 package aoc.day04;
 
+import aoc.common.Direction;
+import aoc.common.Tuple;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

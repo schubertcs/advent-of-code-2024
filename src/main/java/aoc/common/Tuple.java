@@ -1,4 +1,4 @@
-package aoc.day04;
+package aoc.common;
 
 import java.util.Objects;
 
@@ -6,7 +6,7 @@ public class Tuple {
     public final int x;
     public final int y;
 
-    Tuple(final int x, final int y) {
+    public Tuple(final int x, final int y) {
         this.x = x;
         this.y = y;
     }
@@ -26,5 +26,13 @@ public class Tuple {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString() {
+        return "Tuple{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

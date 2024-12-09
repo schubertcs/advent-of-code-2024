@@ -1,9 +1,9 @@
-package aoc.day04;
+package aoc.common;
 
 import java.util.Arrays;
 import java.util.List;
 
-enum Direction {
+public enum Direction {
     RIGHT(1, 0),
     DOWN(0, 1),
     LEFT(-1, 0),
@@ -25,7 +25,19 @@ enum Direction {
         this.yOffset = yOffset;
     }
 
-    Tuple getNext(final Tuple current) {
+    public Tuple getNext(final Tuple current) {
         return new Tuple(current.x + xOffset, current.y + yOffset);
+    }
+    public Direction turn90DegreesRight() {
+        return switch (this) {
+            case RIGHT -> DOWN;
+            case DOWN -> LEFT;
+            case LEFT -> UP;
+            case UP -> RIGHT;
+            case DOWN_RIGHT -> DOWN_LEFT;
+            case DOWN_LEFT -> UP_LEFT;
+            case UP_LEFT -> UP_RIGHT;
+            case UP_RIGHT -> DOWN_RIGHT;
+        };
     }
 }

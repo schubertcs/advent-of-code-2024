@@ -1,5 +1,8 @@
 package aoc.day04;
 
+import aoc.common.Direction;
+import aoc.common.Tuple;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;

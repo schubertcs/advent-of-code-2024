@@ -40,4 +40,8 @@ public enum Direction {
             case UP_RIGHT -> DOWN_RIGHT;
         };
     }
+
+    public Direction turn90DegreesLeft() {
+        return turn90DegreesRight().turn90DegreesRight().turn90DegreesRight();
+    }
 }
